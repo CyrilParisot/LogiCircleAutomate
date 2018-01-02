@@ -5,7 +5,7 @@ const fetch = require('node-fetch')
 const path = require('path')
 
 
-async function startLogiCircle()  {
+async function stopLogiCircle()  {
     const user = {
         email: process.env.LOGI_EMAIL,
         password: process.env.LOGI_PASS
@@ -47,4 +47,4 @@ async function startLogiCircle()  {
 }
 
 
-startLogiCircle();
+stopLogiCircle();
