@@ -1,8 +1,5 @@
 const puppeteer = require('puppeteer')
 const debug = require('debug')('dsd')
-const fs = require('fs')
-const fetch = require('node-fetch')
-const path = require('path')
 
 
 async function stopLogiCircle()  {

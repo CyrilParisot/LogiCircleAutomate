@@ -1,9 +1,5 @@
 const puppeteer = require('puppeteer')
 const debug = require('debug')('dsd')
-const fs = require('fs')
-const fetch = require('node-fetch')
-const path = require('path')
-
 
 async function startLogiCircle()  {
     const user = {
@@ -21,11 +17,13 @@ async function startLogiCircle()  {
     await page.focus('#passwordInput')
     await page.type(user.password)
 
+    debug('logging button '+user.password)
+
     await page.waitFor(5000)
     await page.click('.krypto-login__button button')
 
     await page.waitFor(5000)
-    // waitForNavigation doesn't work in this webapp, so workaround used :
+    // waitForNavigation doesn't work in this webapp, so workaround used
    await new Promise(resolve => setTimeout(() => resolve(), 15000))
 
     // debug('dismissing "subscribe" prompt')
