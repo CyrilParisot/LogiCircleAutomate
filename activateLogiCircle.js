@@ -17,7 +17,7 @@ async function startLogiCircle()  {
     await page.focus('#passwordInput')
     await page.type(user.password)
 
-    debug('logging button '+user.password)
+    debug('logging button ')
 
     await page.waitFor(5000)
     await page.click('.krypto-login__button button')

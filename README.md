@@ -1,14 +1,21 @@
 Installation minimium
 
   nodeJS V 9.2.1 or more
+    sudo apt-get install nodejs
   install npm 5.5.1 or more
+    sudo apt-get install npm
 
+
+  cd "git clone location"
+      sudo npm install n -g
+    // use lastest stable version
+      sudo n stable
   module nodejs
-  npm install puppeteer
-
+    npm i puppeteer
+    npm i debug
 
   // scan network tools
-  sudo apt-get install nmap
+    sudo apt-get install nmap
 
 Run
 
