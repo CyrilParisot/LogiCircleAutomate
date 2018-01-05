@@ -29,11 +29,13 @@ async function startLogiCircle()  {
     // debug('dismissing "subscribe" prompt')
     // await page.click('button.krypto-modalWindow__button')
     // await page.waitFor(5000)
-
-    debug('activate camera')
-    await page.click('.krypto-button__textWrapper')
-    await page.waitFor(5000)
-
+    if (!!(await page.$('.krypto-overlayCameraTurnedOff__header'))){
+      debug('activate camera')
+      await page.click('.krypto-button__textWrapper')
+      await page.waitFor(5000)
+    } else {
+      debug('camera already ativate')
+    }
     debug('close')
     await page.close()
     await browser.close()
